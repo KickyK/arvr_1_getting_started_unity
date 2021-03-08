@@ -2,6 +2,31 @@
 
 namespace ARVR.ScriptableTypes
 {
+    //ARVR/Common/Scriptable Objects/Types/ExtendedTypes.cs
+    //bool => BoolReference, BoolVariable
+
+    [CreateAssetMenu]
+    public class BoolVariable : ScriptableObject
+    {
+        public bool Value;
+    }
+
+    [System.Serializable]
+    public class BoolReference
+    {
+        public bool UseConstant = true;
+        public bool ConstantValue;
+        public BoolVariable Variable;
+
+        public bool Value
+        {
+            get
+            {
+                return UseConstant == true ? ConstantValue : Variable.Value;
+            }
+        }
+    }
+
     [CreateAssetMenu(fileName = "FloatVariable", menuName = "Scriptable Objects/Variables/Float")]
     public class FloatVariable : ScriptableObject
     {
@@ -24,7 +49,7 @@ namespace ARVR.ScriptableTypes
         {
             get
             {
-                return UseConstant ? ConstantValue : Variable.Value;
+                return UseConstant == true ? ConstantValue : Variable.Value;
             }
         }
     }
