@@ -18,7 +18,7 @@ namespace ARVR.Selection
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             if (currectSelection != null)
             {
