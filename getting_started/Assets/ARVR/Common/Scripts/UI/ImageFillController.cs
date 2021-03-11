@@ -34,12 +34,12 @@ namespace ARVR.UI
 
         private void Awake()
         {
-            ////prevent execution unless Max > Min
-            //if (Maximum.Value <= Minimum.Value)
-            //    throw new System.ArgumentException("Maximum cannot be lower than Minimum - Check FloatReference values attached to this controller!");
+            //prevent execution unless Max > Min
+            if (Maximum.Value <= Minimum.Value)
+                throw new System.ArgumentException("Maximum cannot be lower than Minimum - Check FloatReference values attached to this controller!");
 
-            //if (Current.Value < Minimum.Value || Current.Value > Maximum.Value)
-            //    throw new System.ArgumentException("Current value must be between Maximum and Minimum - Check FloatReference values attached to this controller!");
+            if (Current.Value < Minimum.Value || Current.Value > Maximum.Value)
+                throw new System.ArgumentException("Current value must be between Maximum and Minimum - Check FloatReference values attached to this controller!");
         }
 
         private void Update()

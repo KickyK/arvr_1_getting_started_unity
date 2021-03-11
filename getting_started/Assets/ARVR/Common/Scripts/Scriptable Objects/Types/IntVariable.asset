@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a009309c67942f4381decc9584e082d, type: 3}
-  m_Name: PlayerStamina
+  m_Script: {fileID: 11500000, guid: f08ff4d62c20d554c828293003b5fd76, type: 3}
+  m_Name: IntVariable
   m_EditorClassIdentifier: 
-  Value: 16.5
+  Value: 0
   Name: 
   Description: 

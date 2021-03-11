@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a009309c67942f4381decc9584e082d, type: 3}
-  m_Name: PlayerStamina
+  m_Name: RespawnRateEnemies
   m_EditorClassIdentifier: 
-  Value: 16.5
-  Name: 
-  Description: 
+  Value: 60000
+  Name: respawn for enemies
+  Description: Larges description, re-factoring

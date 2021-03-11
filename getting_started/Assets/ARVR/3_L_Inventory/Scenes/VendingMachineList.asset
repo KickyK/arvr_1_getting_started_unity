@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a009309c67942f4381decc9584e082d, type: 3}
-  m_Name: PlayerStamina
+  m_Script: {fileID: 11500000, guid: 7480392c8c8752a41b96e7554d3ff22f, type: 3}
+  m_Name: VendingMachineList
   m_EditorClassIdentifier: 
-  Value: 16.5
+  list: []
   Name: 
   Description: 

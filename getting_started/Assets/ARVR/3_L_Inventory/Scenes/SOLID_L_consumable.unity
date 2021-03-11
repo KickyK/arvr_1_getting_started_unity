@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 433648285}
   - component: {fileID: 433648284}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -876,12 +876,12 @@ PrefabInstance:
     - target: {fileID: 249126339385065469, guid: 50a7ae868b97e2f4196c6da8240576f6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -341
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 249126339385065469, guid: 50a7ae868b97e2f4196c6da8240576f6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 162
+      value: 145
       objectReference: {fileID: 0}
     - target: {fileID: 249126339385065469, guid: 50a7ae868b97e2f4196c6da8240576f6,
         type: 3}
@@ -969,9 +969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26437d57221757f479fc5e1664b681eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  consumablePrefabList:
-  - {fileID: 1282870137230404, guid: 32613f8bb48411147a34f8c5823dbdc1, type: 3}
-  - {fileID: 1459594811507850, guid: dc1e01600de93ea44b8170ffdfe1b0dd, type: 3}
+  consumablePrefabList: {fileID: 11400000, guid: 32d64800d3b460f439283784b622befd,
+    type: 2}
   consumableExitTransform: {fileID: 2115815431}
   consumableAudioClip: {fileID: 8300000, guid: a1162cf1df840364e90b50a774b23b4a, type: 3}
   keyCode: 32
@@ -1089,17 +1088,17 @@ PrefabInstance:
     - target: {fileID: 249126339385065469, guid: 50a7ae868b97e2f4196c6da8240576f6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -429
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 249126339385065469, guid: 50a7ae868b97e2f4196c6da8240576f6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 162
+      value: 145
       objectReference: {fileID: 0}
     - target: {fileID: 249126339385065469, guid: 50a7ae868b97e2f4196c6da8240576f6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 249126339385065469, guid: 50a7ae868b97e2f4196c6da8240576f6,
         type: 3}
@@ -1870,12 +1869,12 @@ PrefabInstance:
     - target: {fileID: 249126339385065469, guid: 50a7ae868b97e2f4196c6da8240576f6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -513
+      value: -73
       objectReference: {fileID: 0}
     - target: {fileID: 249126339385065469, guid: 50a7ae868b97e2f4196c6da8240576f6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 162
+      value: 145
       objectReference: {fileID: 0}
     - target: {fileID: 249126339385065469, guid: 50a7ae868b97e2f4196c6da8240576f6,
         type: 3}
@@ -2002,10 +2001,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 433648287}
     m_Modifications:
+    - target: {fileID: 1358793958886345945, guid: 0402c775384336b40af70f5e5fc49bc7,
+        type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358793958886345945, guid: 0402c775384336b40af70f5e5fc49bc7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.82177514
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358793958886345945, guid: 0402c775384336b40af70f5e5fc49bc7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.8392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358793958886345945, guid: 0402c775384336b40af70f5e5fc49bc7,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0.671
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358793958886345945, guid: 0402c775384336b40af70f5e5fc49bc7,
+        type: 3}
+      propertyPath: m_FillMethod
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358793958886345945, guid: 0402c775384336b40af70f5e5fc49bc7,
+        type: 3}
+      propertyPath: m_FillOrigin
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1358793960844009392, guid: 0402c775384336b40af70f5e5fc49bc7,
         type: 3}
       propertyPath: ColorSolidFill.g
-      value: 0.82177514
+      value: 0.36440846
       objectReference: {fileID: 0}
     - target: {fileID: 1358793960844009392, guid: 0402c775384336b40af70f5e5fc49bc7,
         type: 3}
@@ -2030,12 +2059,12 @@ PrefabInstance:
     - target: {fileID: 1358793960844009398, guid: 0402c775384336b40af70f5e5fc49bc7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -427
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1358793960844009398, guid: 0402c775384336b40af70f5e5fc49bc7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 231
+      value: 214
       objectReference: {fileID: 0}
     - target: {fileID: 1358793960844009398, guid: 0402c775384336b40af70f5e5fc49bc7,
         type: 3}
