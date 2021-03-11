@@ -4,9 +4,9 @@ using UnityEngine;
 public class RotationController : MonoBehaviour
 {
     // public FloatScriptableObject rotation;
-    public FloatReference rotation;
+    // public BoolReference direction;
 
-    public BoolReference direction;
+    public FloatReference rotation;
 
     private void Start()
     {
