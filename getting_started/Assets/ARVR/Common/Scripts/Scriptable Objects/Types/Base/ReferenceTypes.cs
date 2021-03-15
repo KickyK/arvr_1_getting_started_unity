@@ -40,6 +40,23 @@ namespace ARVR.ScriptableTypes
     #endregion Generic Type
 
     #region Reference Types
+    //Generic type to replace BoolReference, IntReference etc
+
+    [System.Serializable]
+    public class VariableReference<T, V> where V : ScriptableDataType<T>
+    {
+        public bool UseConstant = true;
+        public T ConstantValue;
+        public V Variable;
+
+        public T Value
+        {
+            get
+            {
+                return UseConstant ? ConstantValue : Variable.Value;
+            }
+        }
+    }
 
     [System.Serializable]
     public class BoolReference
@@ -129,6 +146,22 @@ namespace ARVR.ScriptableTypes
         public TransformVariable Variable;
 
         public Transform Value
+        {
+            get
+            {
+                return UseConstant ? ConstantValue : Variable.Value;
+            }
+        }
+    }
+
+    [System.Serializable]
+    public class Vector3Reference
+    {
+        public bool UseConstant = true;
+        public Vector3 ConstantValue;
+        public Vector3Variable Variable;
+
+        public Vector3 Value
         {
             get
             {

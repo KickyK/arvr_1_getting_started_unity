@@ -7,6 +7,7 @@ namespace ARVR.Events
     {
         public GameEvent Event;
         public UnityEvent Response;
+        public UnityAction<int, string> OnSomething = delegate { };
 
         private void OnEnable()
         {

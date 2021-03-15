@@ -8,6 +8,7 @@ TagManager:
   - ARVR
   - Interactable
   - Consumable
+  - Door
   layers:
   - Default
   - TransparentFX

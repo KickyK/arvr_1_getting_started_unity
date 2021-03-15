@@ -6,8 +6,13 @@ namespace ARVR.Events
     [CreateAssetMenu(fileName = "GameEvent", menuName = "Scriptable Objects/Events/GameEvent")]
     public class GameEvent : ScriptableObject
     {
+        [Header("Descriptive Information (optional)")]
+        [ContextMenuItem("Reset Name", "ResetName")]
+        public string Name;
+
         private List<GameEventListener> listeners = new List<GameEventListener>();
 
+        [ContextMenu("Raise Event")]
         public void Raise()
         {
             for (int i = listeners.Count - 1; i >= 0; i--)

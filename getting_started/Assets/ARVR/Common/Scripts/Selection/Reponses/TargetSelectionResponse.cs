@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ARVR.Utilities;
+using UnityEngine;
 
 namespace ARVR.Selection
 {
@@ -25,14 +26,15 @@ namespace ARVR.Selection
             currentTargetInstance = Instantiate(targetSelectionPrefab, Vector3.zero, Quaternion.Euler(0, 0, 0));
             currentTargetInstance.SetActive(false);
 
-            Vector3 source = new Vector3(1, 1, 1);
-            Vector3 target = new Vector3(5, 5, 5);
-            Vector3 normalizedDirection = source.GetDirection(target);
+            //demo in class - remove
+            //Vector3 source = new Vector3(1, 1, 1);
+            //Vector3 target = new Vector3(5, 5, 5);
+            //Vector3 normalizedDirection = source.GetDirection(target);
 
-            Vector3 x = new Vector3(1, 5, 10);
-            x.ToGround(0);
-
+            //Vector3 x = new Vector3(1, 5, 10);
+            //x.ToGround(0);
         }
+
         public void OnSelect(Transform selection)
         {
             if (currentTargetInstance != null)
@@ -43,7 +45,7 @@ namespace ARVR.Selection
                     currentTargetInstance.transform.position = selection.position - new Vector3(0, hitInfo.distance - targetOffset, 0);
                     float mag = selection.GetComponent<Collider>().bounds.size.magnitude / scaleFactor;
                     currentTargetInstance.transform.localScale = new Vector3(mag, mag, mag);
-                    currentTargetInstance.SetActive(true);                 
+                    currentTargetInstance.SetActive(true);
                 }
             }
         }
