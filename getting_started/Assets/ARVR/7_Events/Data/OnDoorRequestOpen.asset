@@ -10,5 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9f2c586d1373234191e35bc43668028, type: 3}
-  m_Name: OnDoorToggle
+  m_Name: OnDoorRequestOpen
   m_EditorClassIdentifier: 
+  Name: This event is called when we want to open the door

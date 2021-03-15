@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //  transform.position +=
+
         characterController.Move(moveSpeed.Value * new Vector3(movementDirection.z, 0, movementDirection.x) * Time.deltaTime);
 
         if (movementDirection != Vector3.zero)
