@@ -652,8 +652,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017488025}
-  m_LocalRotation: {x: 0.055768967, y: 0.9419333, z: -0.19781393, w: 0.2655585}
-  m_LocalPosition: {x: -4.2108946, y: 2.9803839, z: 13.594257}
+  m_LocalRotation: {x: 0.07650566, y: 0.87089217, z: -0.14367743, w: 0.46373546}
+  m_LocalPosition: {x: -6.8091345, y: 3.418138, z: 13.780095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -829,8 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd347daf9e5d0ab46878f6706069cba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displacementSpeed: 0.01
-  maxDisplacement: 1
+  displacementSpeed: 0.02
+  maxDisplacement: 1.25
   displacementDirection: {x: 0, y: 1, z: 0}
 --- !u!135 &1379848588
 SphereCollider:
@@ -840,7 +840,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379848582}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
@@ -1218,8 +1218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd347daf9e5d0ab46878f6706069cba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displacementSpeed: 0.01
-  maxDisplacement: 1
+  displacementSpeed: 0.02
+  maxDisplacement: 1.25
   displacementDirection: {x: 0, y: 1, z: 0}
 --- !u!1 &2035431389
 GameObject:
