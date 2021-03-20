@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ARVR.Utilities
 {
-    internal class UIGizmos
+    public class UIGizmos
     {
         /// <summary>
         ///

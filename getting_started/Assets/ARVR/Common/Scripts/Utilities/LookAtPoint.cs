@@ -1,5 +1,4 @@
-﻿//C# Example (LookAtPoint.cs)
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ARVR.Utilities
 {
@@ -9,7 +8,7 @@ namespace ARVR.Utilities
         [SerializeField]
         private Vector3 lookAtPoint = Vector3.zero;
 
-        void Update()
+        private void Update()
         {
             transform.LookAt(lookAtPoint);
             Debug.DrawLine(transform.position, lookAtPoint);
