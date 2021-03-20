@@ -9,6 +9,20 @@ namespace ARVR.Events
     {
         private static Dictionary<string, UnityEvent> eventDictionary = new Dictionary<string, UnityEvent>();
 
+        public static void Raise(string eventName)
+        {
+            if (eventDictionary.TryGetValue(eventName, out var thisEvent))
+            {
+                thisEvent.Invoke();
+            }
+
+            //if (eventDictionary.ContainsKey(eventName))
+            //{
+            //    UnityEvent theEvent = eventDictionary[eventName];
+            //    theEvent.Invoke();
+            //}
+        }
+
         public static void RegisterListener(string eventName, UnityAction listener)
         {
             if (eventDictionary.TryGetValue(eventName, out var thisEvent))
@@ -26,17 +40,10 @@ namespace ARVR.Events
         public static void UnregisterListener(string eventName, UnityAction listener)
         {
             if (Instance == null) return;
+
             if (eventDictionary.TryGetValue(eventName, out var thisEvent))
             {
                 thisEvent.RemoveListener(listener);
-            }
-        }
-
-        public static void Raise(string eventName)
-        {
-            if (eventDictionary.TryGetValue(eventName, out var thisEvent))
-            {
-                thisEvent.Invoke();
             }
         }
     }

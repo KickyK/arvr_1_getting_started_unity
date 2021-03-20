@@ -1,10 +1,17 @@
 ﻿using ARVR.Events;
 using UnityEngine;
 
+//public enum TriggerEntity : sbyte
+//{
+//    Player, NONPC, Robot
+//}
+
 public class DoorToggleEventTrigger : MonoBehaviour
 {
     public string targetTag;
     public GameEvent OnDoorToggle;
+
+    //  public TriggerEntity entityTag;
 
     private void Awake()
     {

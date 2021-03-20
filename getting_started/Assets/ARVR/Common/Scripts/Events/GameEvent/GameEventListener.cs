@@ -6,7 +6,7 @@ namespace ARVR.Events
     public class GameEventListener : MonoBehaviour
     {
         public GameEvent Event;
-        public UnityEvent Response;
+        public UnityEvent Response; //List => DoorController::HandleDoorToggle
 
         private void OnEnable()
         {
