@@ -5,28 +5,30 @@ namespace ARVR.FiniteStateMachine
 {
     public interface IState
     {
-        void Update();
-
         void OnEnter();
+
+        void Update();  //Tick()
 
         void OnExit();
     }
 
-    public class StateMachine
+    public class StateMachine //: MonoBehaviour
     {
         private IState currentState;
+        public String State => currentState.ToString();
         private Dictionary<Type, List<Transition>> transitions = new Dictionary<Type, List<Transition>>();
         private List<Transition> currentTransitions = new List<Transition>();
         private List<Transition> anyTransitions = new List<Transition>();
         private static List<Transition> EmptyTransitions = new List<Transition>(0);
-
-        public String State => currentState.ToString();
 
         public void Update()
         {
             var transition = GetTransition();
             if (transition != null)
                 SetState(transition.To);
+
+            //if(currentState != null)
+            //    currentState.Update();
 
             currentState?.Update();
         }
@@ -51,9 +53,9 @@ namespace ARVR.FiniteStateMachine
             if (transitions.TryGetValue(from.GetType(), out var transitionsList) == false)
             {
                 transitionsList = new List<Transition>();
-                transitions[from.GetType()] = transitionsList;
+                transitions[from.GetType()] = transitionsList;   //Dictionary => [{StandingClosed, List[]}, {Opening, List[]}]
             }
-            transitionsList.Add(new Transition(to, condition));
+            transitionsList.Add(new Transition(to, condition));//Dictionary => [{StandingClosed, List[Transition(Opening, HasReceivedOpenRequest)]}}]
         }
 
         public void AddAnyTransition(IState state, Func<bool> condition)

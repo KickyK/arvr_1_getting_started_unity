@@ -17,7 +17,6 @@
                 instance = new FileManager(fname);
                 return instance;
             }
-
             return instance;
         }
 
@@ -28,6 +27,7 @@
 
         public void Save(string jsonObject)
         {
+            /*code*/
         }
 
         public string Load()

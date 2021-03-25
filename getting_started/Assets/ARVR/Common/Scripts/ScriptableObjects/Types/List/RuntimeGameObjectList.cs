@@ -3,7 +3,7 @@
 namespace ARVR.ScriptableTypes
 {
     [System.Serializable]
-    [CreateAssetMenu(fileName = "RuntimeGameObjectList", menuName = "Scriptable Objects/Collections/List/Game Object", order = 4)]
+    [CreateAssetMenu(fileName = "RuntimeGameObjectList", menuName = "Scriptable Objects/Collections/List/Game Object")]
     public class RuntimeGameObjectList : RuntimeList<GameObject>
     {
     }

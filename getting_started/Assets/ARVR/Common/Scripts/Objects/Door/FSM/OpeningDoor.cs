@@ -19,7 +19,9 @@ public class OpeningDoor : IState
     {
         doorController.currentDisplacement += doorController.movementParameters.increment;
         var easedIncrement = doorController.movementParameters.increment *
-                        doorController.movementParameters.easeOpenCloseCurve.Evaluate(doorController.currentDisplacement / doorController.movementParameters.maximum);
+                        doorController.movementParameters.easeOpenCloseCurve.Evaluate(
+                            doorController.currentDisplacement / doorController.movementParameters.maximum);
+
         doorController.transform.Translate(doorController.movementParameters.direction * easedIncrement, Space.Self);
     }
 

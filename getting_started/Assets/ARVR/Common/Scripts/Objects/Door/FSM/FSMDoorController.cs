@@ -25,6 +25,8 @@ public class FSMDoorController : MonoBehaviour
 
     private void Awake()
     {
+        //     StateMachine sm = GetComponent<StateMachine>();
+
         stateMachine = new StateMachine();
 
         var closed = new StandClosed(this);
@@ -33,6 +35,7 @@ public class FSMDoorController : MonoBehaviour
         var closing = new ClosingDoor(this);
 
         stateMachine.AddTransition(closed, opening, HasReceivedOpenRequest());
+
         stateMachine.AddTransition(opening, opened, HasFullyDisplaced());
         stateMachine.AddTransition(opened, closing, HasReceivedCloseRequest());
         stateMachine.AddTransition(closing, closed, HasFullyDisplaced());
@@ -41,8 +44,27 @@ public class FSMDoorController : MonoBehaviour
         Func<bool> HasReceivedCloseRequest() => () => IsToggleRequestReceived;
         Func<bool> HasFullyDisplaced() => () => currentDisplacement >= movementParameters.maximum;
 
+        //     Func<bool> IsSatisfied() => () => prices == bAffordable && menu.Supports("GF");
+
+        //Func<int, int, int> arithmeticFunc = add;
+        //Func<int, int, double> func2 = (x, y) => { return x / y; };
+
         stateMachine.SetState(closed);
     }
+
+    //public void ProcessNumbers(List<int> a, List<int> b, Func<int, int, int> arithmetic)
+    //{
+    //    int sum;
+    //    for (int i = 0; i < a.Count; i++)
+    //    {
+    //        sum += arithmetic(a[i], b[i]);
+    //    }
+    //}
+
+    //public int add(int a, int b)
+    //{
+    //    return a + b;
+    //}
 
     private void Update()
     {
